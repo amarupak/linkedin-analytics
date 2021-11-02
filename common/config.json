@@ -1,0 +1,8 @@
+{
+    "header": "This file is used as input for date and UGC post parameters. Define number of months and number of posts you want to retrieve",
+    "organization_code": "",
+    "previous_months": -8,
+    "post_count": "100",
+    "output_dir": "C:\\LinkedIn-Analytics\\"
+}
+
