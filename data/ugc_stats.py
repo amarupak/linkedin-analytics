@@ -354,3 +354,42 @@ if __name__ == '__main__':
     else:
         log = "Successfully written output to: " + get_filepath('ugc_share_statistics_df.xlsx')
         print(log)
+
+    # ##############################################Likes and comments Profiles#####################################
+    # try:
+    #     # Get subset of ugc_posts_shares_df
+    #     ugc = ugc_posts_shares_df[['id', 'activity_id']]
+    #
+    #     # Join UGC and like_actors
+    #     ugc_likes = pd.merge(ugc, like_actors, how='left', left_on='activity_id', right_on='object_ref')
+    #
+    #     # Join like_actors and like_actors_details
+    #     ugc_likes_data = pd.merge(ugc_likes, like_profiles, how='left', left_on='actor_id', right_on='id')
+    #     ugc_likes_data['action_type'] = "Like"
+    #
+    #     # Final UGC_likes dataframe
+    #     ugc_likes_stats = ugc_likes_data.drop(columns=['actor', '$URN', 'object_ref', 'actors_info'])
+    #
+    #     # -----------------------------------------------------------------------------------------------------------
+    #
+    #     # Join UGC and comment_actors
+    #     ugc_comments = pd.merge(ugc, comment_actors, how='left', left_on='activity_id', right_on='object_ref')
+    #
+    #     # Join comment_actors and like_actors_details
+    #     ugc_comments_data = pd.merge(ugc_comments, comment_profiles, how='left', left_on='actor_id', right_on='id')
+    #     ugc_comments_data['action_type'] = "Comment"
+    #
+    #     # Final UGC_comments dataframe
+    #     ugc_comments_stats = ugc_comments_data.drop(columns=['actor', '$URN', 'object_ref', 'actors_info'])
+    #
+    #     profiles_writer = pd.ExcelWriter(get_filepath('ugc_profiles.xlsx'), engine='xlsxwriter')
+    #
+    #     # write each dataframe to individual sheets
+    #     ugc_likes_stats.to_excel(profiles_writer, sheet_name='ugc_likes_stats')
+    #     ugc_comments_stats.to_excel(profiles_writer, sheet_name='ugc_comments_stats')
+    #     profiles_writer.save()
+    # except Exception as e:
+    #     print(e)
+    # else:
+    #     log = "Successfully written output to: " + get_filepath('ugc_profiles.xlsx')
+    #     print(log)
