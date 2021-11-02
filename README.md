@@ -15,6 +15,9 @@ This repository contains the python scripts that write post statistics related t
         pip install -r requirements.txt
 
 * Create _credentials.json_ file in common folder that can store your token under `access_token` variable. Do not share the token with anyone.
+  
+* Add your organization code to the `organization_code` variable in _config.json_
+  
 * Run individual files or create a script to run all files.
 
 ## Recommendations
